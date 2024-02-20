@@ -1,6 +1,6 @@
-const data = ['a','b','c','d','e','b','c']
-const data1 = data.filter((value,index,self)=> {return self.indexOf(value) === index})
-console.log(data1);
+// const data = ['a','b','c','d','e','b','c']
+// const data1 = data.filter((value,index,self)=> {return self.indexOf(value) === index})
+// console.log(data1);
 
 // const names = ['nitin','malylam','sangam']
 
@@ -65,3 +65,45 @@ console.log(data1);
 
 // let LargestNumber = largestNum(numbers)
 // console.log(LargestNumber);
+
+// const data = ['a','d','f','g','h','f','g','h','b','b','h',]
+// const data1 = data.filter((value,index,self)=> {
+//     return self.indexOf(value) === index;
+// })
+// console.log(data1);
+
+// const num = [45,76,89,99,56,34,23,444]
+// let maxNum = num[0]
+// for(let i=0; i<= num.length -1; i++){
+//     if(maxNum < num[i]){
+//         console.log(num[i]);
+//         maxNum = num[i]
+//     }
+// }
+// console.log(maxNum);
+
+// let str="maalm"
+// let newStr = str.split('').reverse().join('')
+// if(str === newStr){
+//     console.log("String is Palindrome");
+// }else{
+//     console.log("String is not palindrome");
+// }
+
+// const data = ["a",'v','c','c','v','e','e']
+// let obj = {}
+// for(let char of data){
+//     obj[char] = (obj[char] || 0 ) + 1
+// }
+// console.log(obj);
+
+
+// for(let i=0; i<=4; i++){
+//     let n = '';
+//     for(let j=1; j<=i; j++){
+//         n += '*'
+//     }
+//     console.log(n);
+// }
+
+  
