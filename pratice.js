@@ -106,4 +106,17 @@
 //     console.log(n);
 // }
 
-  
+let arr = [1,2,3,4,5,6,7,8,9];
+function findPairs(arr){
+    let pairs = []
+    for(let i=0;i<= arr.length; i++){
+        for(let j= 1+i; j<= arr.length; j++){
+            if(arr[i] + arr[j] === 9){
+                pairs.push([arr[i], arr[j]]);
+            }
+        }
+    }
+    return pairs;
+}
+let result = findPairs(arr);
+console.log(result); 
