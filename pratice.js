@@ -1,122 +1,77 @@
-// const data = ['a','b','c','d','e','b','c']
-// const data1 = data.filter((value,index,self)=> {return self.indexOf(value) === index})
-// console.log(data1);
+// print pattern
+for(let i=0; i<=4; i++){
+    let n = '';
+    for(let j=1; j<=i; j++){
+        n += '*'
+    }
+    console.log(n);
+}
 
-// const names = ['nitin','malylam','sangam']
-
-// function isPalindrome(str){
-//     // const newStr = str.replace(['/a-zA-Z0-9/,g']).toLowerCase()
-//     return str === str.split('').reverse().join('')
-// }
-
-// const a = names.filter(isPalindrome)
-// console.log(a);
-
-// const num = [1,2,3,4,5,6];
-// const val = 6;
-
-// function data(num,val){
-//     let left = 0;
-//     let index = -1;
-//     let right = num.length -1;
-//     while (left <= right) {
-//         let mid = Math.floor((left + right) / 2);
-
-//         if (num[mid] >= val) {
-//             right = mid - 1;
-//         } else {
-//             left = mid + 1;
-//         }
-//     }
-//     index = left;
-
-//     num.splice(index, 0, val);
-
-//     return num;
-// }
-
-// const a = data(num,val);
-// console.log(a);
-
-// const naam = "Hey Good Mroning";
-// const d = naam.split('').reverse().join('');
-// console.log(d);
-// const b= naam.split(' ').map((word)=> word.split('').reverse().join('')).join(' ')
-// console.log(b);
-
-// const fruits =["Apple","Banana","Mango","Peru","Apple","Banana","Apple","Chiku","Chiku"]
-// let obj ={};
-// for(const word of fruits){
-//     obj[word] = (obj[word] || 0) + 1
-// }
-// console.log(obj);
-
-// const numbers = [87,9,8,56,88,999,548,215,365,879];
-
-// function largestNum () {
-//     let largest = numbers[0];
-//     for(let i=1; i< numbers.length -1; i++){
-//         if(numbers[i] > largest){
-//             largest = numbers[i]
-//         }
-//     }
-//     return largest;
-// }
-
-// let LargestNumber = largestNum(numbers)
-// console.log(LargestNumber);
-
-// const data = ['a','d','f','g','h','f','g','h','b','b','h',]
-// const data1 = data.filter((value,index,self)=> {
-//     return self.indexOf(value) === index;
-// })
-// console.log(data1);
-
-// const num = [45,76,89,99,56,34,23,444]
-// let maxNum = num[0]
-// for(let i=0; i<= num.length -1; i++){
-//     if(maxNum < num[i]){
-//         console.log(num[i]);
-//         maxNum = num[i]
-//     }
-// }
-// console.log(maxNum);
-
-// let str="maalm"
-// let newStr = str.split('').reverse().join('')
-// if(str === newStr){
-//     console.log("String is Palindrome");
-// }else{
-//     console.log("String is not palindrome");
-// }
-
-// const data = ["a",'v','c','c','v','e','e']
-// let obj = {}
-// for(let char of data){
-//     obj[char] = (obj[char] || 0 ) + 1
-// }
-// console.log(obj);
-
-
-// for(let i=0; i<=4; i++){
-//     let n = '';
-//     for(let j=1; j<=i; j++){
-//         n += '*'
-//     }
-//     console.log(n);
-// }
-
-let arr = [1,2,3,4,5,6,7,8,9];
-function findPairs(arr){
+// find pair number in array
+let arr1 = [1,2,3,4,5,6,7,8,9];
+function findPairs(arr1){
     let pairs = []
-    for(let i=0;i<= arr.length; i++){
-        for(let j= 1+i; j<= arr.length; j++){
-            if(arr[i] + arr[j] === 9){
-                pairs.push([arr[i], arr[j]]);
+    for(let i=0;i<= arr1.length; i++){
+        for(let j= 1+i; j<= arr1.length; j++){
+            if(arr1[i] + arr1[j] === 9){
+                pairs.push([arr1[i], arr1[j]]);
             }
         }
     }
     return pairs;
 }
-let result = findPairs(arr);
+let result = findPairs(arr1);
 console.log(result); 
+
+
+// find largest number in array
+let arr = [4,7,6,8,99,25,6,8,999,256,254,586,156,355];
+function findLargestNUmber(arr) {
+    let largest = arr[0];
+    for(let i=0; i<= arr.length - 1; i++){
+    if(largest < arr[i]) {
+        largest = arr[i]
+    }
+    }
+    return largest;
+}
+
+console.log(findLargestNUmber(arr))
+
+let str = "Hey Good Morning";
+
+// reverse a string
+let newStr = str.split('').reverse().join('');
+console.log(newStr); 
+
+// reverse a string with reverse words not all string
+let newStr1 = str.split(' ').map((word) => word.split('').reverse().join('')).join(' ');
+console.log(newStr1);
+
+// find palindrom in array
+let names = ['nitin', 'mukunda', 'malyaylam']
+
+function findPalindrome (str1) {
+    // if(str1 === str1.split('').reverse().join('')){
+    //     console.log("String Palindrome", str1);
+    // }else{
+    //     console.log("Non-palindrome string" , str1);
+    // }
+    return str1 === str1.split('').reverse().join('')
+     
+}
+let data = names.filter(findPalindrome)
+console.log(data);
+
+// remove duplicate from array
+let nums = [5,6,5,6,5,2,5,45,8,5,89,88,47]
+let filterNum = nums.filter((value,index,self) =>  {  return self.indexOf(value) === index})
+console.log(filterNum);
+
+// convert array to object
+let fruits = ['Apple', 'Mango','Banana','Orange','Apple','Chiku','Orange','Banana','Mango','Apple']
+let obj = {}
+for(let fruit of fruits) {
+    obj[fruit] = (obj[fruit] || 0 ) + 1
+}
+console.log(obj);
